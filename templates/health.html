@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Healthcare Claims Dashboard</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    section:hover {
+      background-color: #e0e0e0;
+    }
+    h2 {
+      color: #003366;
+    }
+    .content {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+    section:hover .content {
+      opacity: 1;
+      height: auto;
+      margin-top: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin: 10px 0;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+    .redirect-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #003366;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .redirect-button:hover {
+      background-color: #0059b3;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header style="position: relative;">
+  <h1 style="margin: 0;">Healthcare Claims Data Analysis Dashboard</h1>
+  <a href="{{ url_for('index') }}" class="redirect-button" style="position: absolute; top: 20px; right: 20px;">Back to Portfolio</a>
+</header>
+ 
+<section>
+  <h2>USER IDENTIFICATION</h2>
+  <div class="content">
+    <img src="{{ url_for('static', filename='images/USER IDENTIFICATION.png') }}" alt="User Identification" style="width: 40%; display: block; margin: auto;">
+    <p>
+      ➢ <b>Primary Users</b><br>
+      Claim Managers: Analyze claims data effectively to reduce errors and improve processing efficiency.<br>
+      ➢ <b>Secondary Users</b><br>
+      Healthcare Administrators: Use insights for strategic planning and management.<br>
+      ➢ <b>Justification for User Focus</b><br>
+      Focused on roles that require actionable insights to improve operations and finances.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Provider Analysis Dashboard</h2>
+  <div class="content">
+    <img src="{{ url_for('static', filename='images/Provider Analysis Dashboard.jpg') }}" alt="Provider Dashboard" style="width: 40%; display: block; margin: auto;">
+    <p>
+      <b>Objective:</b> Evaluate provider performance for accountability and improvement.<br>
+      <b>Components:</b> Custom filters and visuals for tracking efficiency.<br>
+      <b>Visuals:</b> Line Charts, Tables, Heatmaps, Bar Charts.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>High-Cost Procedures Identification Dashboard</h2>
+  <div class="content">
+    <img src="{{ url_for('static', filename='images/High-Cost Procedures Identification Dashboard.jpg') }}" alt="High-Cost Dashboard" style="width: 40%; display: block; margin: auto;">
+    <p>
+      <b>Purpose:</b> Identify and manage high-cost procedures in claims.<br>
+      <b>Core Components:</b> Filters and visuals to aid decision making.<br>
+      <b>Visuals:</b> Line Charts, Scatter Plots, Heatmaps, Bar Charts.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Application Demonstration</h2>
+  <div class="content">
+    <img src="{{ url_for('static', filename='images/Application Demonstration1.jpg') }}" alt="Demo 1" style="width: 70%; display: block; margin: auto;">
+    <img src="{{ url_for('static', filename='images/Application Demonstration2.jpg') }}" alt="Demo 2" style="width: 70%; display: block; margin: auto; margin-top: 10px;">
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Harsha - Healthcare Data Insights</p>
+</footer>
+
+</body>
+</html>

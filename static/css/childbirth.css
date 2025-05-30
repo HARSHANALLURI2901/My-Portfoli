@@ -1,0 +1,87 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.redirect-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.redirect-button:hover {
+  background-color: #0056b3;
+}
+
+/* Section Headings */
+section {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Content Block */
+.content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.content:hover {
+  background-color: #d3d3d3;
+  cursor: pointer;
+}
+
+/* Images */
+.medium-image,
+.large-image {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  margin-top: 40px;
+}

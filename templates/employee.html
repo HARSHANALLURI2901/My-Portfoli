@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Satisfaction Analysis</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .redirect-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #fff;
+      color: #003366;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .redirect-button:hover {
+      background-color: #e0e0e0;
+    }
+
+    section {
+      background: #fff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section:hover {
+      background-color: #e0e0e0;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    .content {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+
+    section:hover .content {
+      opacity: 1;
+      height: auto;
+      margin-top: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      header {
+          padding: 10px;
+      }
+
+      .redirect-button {
+          top: 10px;
+          right: 10px;
+          font-size: 14px;
+      }
+
+      section {
+          padding: 15px;
+          max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EMPLOYEE SATISFACTION ANALYSIS DASHBOARD</h1>
+  <a href="{{ url_for('index') }}" class="redirect-button" style="position: absolute">Back to Portfolio</a>
+</header>
+
+<section>
+  <h2>Rating Dashboard</h2>
+  <div class="content">
+    <img src="{{ url_for('static', filename='images/rating.png') }}" alt=" " style="width: 50%; display: block; margin: auto;">
+    <p>➢ This provides a visual analysis of employee ratings across different departments, tracking overall satisfaction trends.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Performance Rating</h2>
+  <div class="content">
+    <img src="{{ url_for('static', filename='images/prating.png') }}" alt=" " style="width: 50%; display: block; margin: auto;">
+    <p>➢ This evaluates employee performance ratings in relation to their satisfaction levels, helping identify gaps or excellence zones.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Comparison Chart</h2>
+  <div class="content">
+    <img src="{{ url_for('static', filename='images/Comparision.png') }}" alt=" " style="width: 50%; display: block; margin: auto;">
+    <p>➢ Compares satisfaction metrics over different algorithms used in the project on the basis of accuracy. We achieved the best accuracy using Random Forest Algorithm with 93%.</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Harshavardhan - Employee Insights</p>
+</footer>
+
+</body>
+</html>
