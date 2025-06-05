@@ -7,85 +7,72 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <style>
+  <style>
     body, h1, h2, h3, h4, h5, h6 {
       font-family: "Raleway", sans-serif;
     }
-.nav-link {
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #ffffff !important;
-  background-color: #0d6efd !important;
-  animation: blink-highlight 0.6s alternate 2;
-  border-radius: 5px;
-}
-
-@keyframes blink-highlight {
-  0% { background-color: #0d6efd; color: white; }
-  50% { background-color: #0b5ed7; color: white; }
-  100% { background-color: #0d6efd; color: white; }
-}
-#education .card:hover {
-  background-color: grey;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-.sidebar {
-  width: 300px;
-  position: fixed;
-  height: 100%;
-  background-color: #fff;
-  z-index: 3;
-  padding: 1rem;
-  top: 0;
-  left: 0;
-}
-
-@media (max-width: 991px) {
-  .sidebar {
-    display: none;
-  }
-}
-
-.main-content {
-  margin-left: 300px;
-  padding: 1rem;
-}
-
-@media (max-width: 991px) {
-  .main-content {
-    margin-left: 0;
-  }
-}
-
+    .nav-link {
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-link:hover {
+      color: #ffffff !important;
+      background-color: #0d6efd !important;
+      animation: blink-highlight 0.6s alternate 2;
+      border-radius: 5px;
+    }
+    @keyframes blink-highlight {
+      0% { background-color: #0d6efd; color: white; }
+      50% { background-color: #0b5ed7; color: white; }
+      100% { background-color: #0d6efd; color: white; }
+    }
+    #education .card:hover {
+      background-color: grey;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .sidebar {
+      width: 300px;
+      position: fixed;
+      height: 100%;
+      background-color: #fff;
+      z-index: 3;
+      padding: 1rem;
+      top: 0;
+      left: 0;
+    }
+    @media (max-width: 991px) {
+      .sidebar {
+        display: none;
+      }
+    }
+    .main-content {
+      margin-left: 300px;
+      padding: 1rem;
+    }
+    @media (max-width: 991px) {
+      .main-content {
+        margin-left: 0;
+      }
+    }
     .hover-opacity:hover {
       opacity: 0.7;
     }
-.card-hover:hover {
-  background-color: #d3d3d3; /* Light grey */
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
+    .card-hover:hover {
+      background-color: #d3d3d3;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
     .btn-hover:hover {
       background-color: #0d6efd !important;
       color: white !important;
     }
-.card-hover:hover {
-  background-color: #d3d3d3; /* light grey */
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
   </style>
 </head>
 <body class="bg-light">
 
 <div class="sidebar border-end d-none d-lg-block" id="sidebar">
   <div class="text-center">
-    <img src="{{ url_for('static', filename='images/Harsha.jpg') }}" 
+    <img src="static/images/Harsha.jpg" 
          class="rounded-circle border border-3 border-dark" style="width:45%; object-fit: cover; aspect-ratio: 1 / 1;" /><br><br>
     <h4><b>PORTFOLIO</b></h4>
     <p class="text-muted">Developed by Harshavardhan</p>
@@ -119,9 +106,9 @@
     <div class="row g-3">
       <!-- Project 1 -->
       <div class="col-md-4">
-        <a href="{{ url_for('health') }}" class="text-decoration-none text-dark">
+        <a href="health.html" class="text-decoration-none text-dark">
           <div class="card card-hover h-100 text-center">
-            <img src="{{ url_for('static', filename='images/health.jpg') }}" 
+            <img src="static/images/health.jpg" 
                  class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
             <div class="card-body">
               <h5 class="card-title"><b>HEALTHCARE ANALYTICS GUI DESIGN</b></h5>
@@ -133,23 +120,23 @@
 
       <!-- Project 2 -->
       <div class="col-md-4">
-        <a href="{{ url_for('employee') }}" class="text-decoration-none text-dark">
-        <div class="card card-hover h-100 text-center">
-          <img src="{{ url_for('static', filename='images/employee.jpg') }}" 
-               class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
-          <div class="card-body">
-            <h5 class="card-title"><b>EMPLOYEE SATISFACTION ANALYSIS</b></h5>
-            <p>Applied Analytics Course Project - Saint Louis University</p>
+        <a href="employee.html" class="text-decoration-none text-dark">
+          <div class="card card-hover h-100 text-center">
+            <img src="static/images/employee.jpg" 
+                 class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+              <h5 class="card-title"><b>EMPLOYEE SATISFACTION ANALYSIS</b></h5>
+              <p>Applied Analytics Course Project - Saint Louis University</p>
+            </div>
           </div>
-        </div>
-       </a>
+        </a>
       </div>
 
       <!-- Project 3 -->
       <div class="col-md-4">
-        <a href="{{ url_for('childbirth') }}" class="text-decoration-none text-dark">
+        <a href="childbirth.html" class="text-decoration-none text-dark">
           <div class="card card-hover h-100 text-center">
-            <img src="{{ url_for('static', filename='images/childbirth.jpg') }}" 
+            <img src="static/images/childbirth.jpg" 
                  class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
             <div class="card-body">
               <h5 class="card-title"><b>PREDICTING BEST SUITABLE MODE OF CHILDBIRTH</b></h5>
@@ -165,7 +152,7 @@
   <div class="row g-3">
     <div class="col-md-4">
       <div class="card text-center">
-        <img src="{{ url_for('static', filename='images/web.jpg') }}" 
+        <img src="static/images/web.jpg" 
              class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
         <div class="card-body">
           <h5 class="card-title">Web Application Development</h5>
@@ -214,59 +201,59 @@
     <hr />
   </div>
 
-<!-- Contact Info Boxes -->
-<div class="bg-secondary text-white p-4" id="contact-info">
-  <h4 class="mb-4"><b>Contact Information</b></h4>
-  <div class="row text-center">
-    <div class="col-md-4 mb-3">
-      <div class="p-3 bg-dark rounded shadow-sm h-100">
-        <i class="fa fa-envelope fa-2x mb-2"></i>
-        <h5>Email</h5>
-        <a href="mailto:harshanalluri29@gmail.com" class="text-white text-decoration-none">harshanalluri29@gmail.com</a>
+  <!-- Contact Info Boxes -->
+  <div class="bg-secondary text-white p-4" id="contact-info">
+    <h4 class="mb-4"><b>Contact Information</b></h4>
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <div class="p-3 bg-dark rounded shadow-sm h-100">
+          <i class="fa fa-envelope fa-2x mb-2"></i>
+          <h5>Email</h5>
+          <a href="mailto:harshanalluri29@gmail.com" class="text-white text-decoration-none">harshanalluri29@gmail.com</a>
+        </div>
       </div>
-    </div>
-<div class="col-md-4 mb-3">
-  <a href="tel:+13142810956" class="p-3 bg-dark rounded shadow-sm h-100 d-block text-white text-decoration-none">
-    <i class="fa fa-phone fa-2x mb-2"></i>
-    <h5>Phone</h5>
-    <p>+1 3142810956</p>
-  </a>
-</div>
-
-    <div class="col-md-4 mb-3">
-      <div class="p-3 bg-dark rounded shadow-sm h-100">
-        <i class="fa fa-map-marker fa-2x mb-2"></i>
-        <h5>Address</h5>
-        <a href="https://www.google.com/maps/place/12664+Mateus+Dr,+St.+Louis,+MO+63146/@38.7297945,-90.6625239,11z/am=t/data=!4m6!3m5!1s0x87df2ddb31ee234d:0xec1001bef3e1113c!8m2!3d38.6989488!4d-90.4667962!16s%2Fg%2F11vl377pwn?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-white text-decoration-none">
-          Saint Louis, Missouri, US
+      <div class="col-md-4 mb-3">
+        <a href="tel:+13142810956" class="p-3 bg-dark rounded shadow-sm h-100 d-block text-white text-decoration-none">
+          <i class="fa fa-phone fa-2x mb-2"></i>
+          <h5>Phone</h5>
+          <p>+1 3142810956</p>
         </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-3 bg-dark rounded shadow-sm h-100">
+          <i class="fa fa-map-marker fa-2x mb-2"></i>
+          <h5>Address</h5>
+          <a href="https://www.google.com/maps/place/12664+Mateus+Dr,+St.+Louis,+MO+63146/" target="_blank" class="text-white text-decoration-none">
+            Saint Louis, Missouri, US
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Contact Me Form -->
-<div class="bg-secondary text-white p-4 mt-4" id="contact">
-  <h4><b>Contact Me</b></h4>
-  <form action="/action_page.php" target="_blank">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input type="text" class="form-control" name="Name" required>
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" name="Email" required>
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <input type="text" class="form-control" name="Message" required>
-    </div>
-    <button type="submit" class="btn btn-dark btn-hover">
-      <i class="fa fa-paper-plane me-2"></i>Send Message
-    </button>
-  </form>
-</div>
+  <!-- Contact Me Form -->
+  <div class="bg-secondary text-white p-4 mt-4" id="contact">
+    <h4><b>Contact Me</b></h4>
+    <form action="mailto:harshanalluri29@gmail.com" method="post" enctype="text/plain">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="Name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="Email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <input type="text" class="form-control" name="Message" required>
+      </div>
+      <button type="submit" class="btn btn-dark btn-hover">
+        <i class="fa fa-paper-plane me-2"></i>Send Message
+      </button>
+    </form>
+  </div>
 
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
